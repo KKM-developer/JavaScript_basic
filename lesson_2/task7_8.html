@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 7 задание
+        alert(null == 0) //false для нестрогого равенства == значений undefined и null
+        // действует особое правило: эти значения ни к чему не приводятся, они равны друг другу и не равны ничему другому. Поэтому null == 0 ложно.
+
+        //8 задание
+        function power(val, pow) {
+            if (pow == 1) {
+                return val;
+            } else{
+                return val * power(val, --pow);
+            }
+        } // это решение подсмотрел в интернете, но так и не понял, как через рекурсию, сделать чтоб выводился ответ 1, если степень 0... при явном прописывании, ломается все эта рекурсия
+    </script>
+</body>
+</html>
