@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // С помощью цикла while вывести все простые числа в промежутке от 0 до 100.
+        let numb = new Array();
+        let end_array = 100;
+        for (i = 0; i <= end_array; i++) {
+                numb.push(i);
+            }
+
+        numb[1] = 0;
+        let a = 2;
+        while (a <= end_array) {
+            if (numb[a] != 0) {
+                let j = a + a;
+                while (j <= end_array) {
+                    numb[j] = 0;
+                    j = j + a;
+                }
+            }
+            a += 1;
+        }
+        alert(numb);
+        let result = new Set(numb);
+        let value = new Array();
+        for (let val of result) value.push(val);
+        value.shift()
+        alert(value);
+    </script>
+</body>
+</html>
