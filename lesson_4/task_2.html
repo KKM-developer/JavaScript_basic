@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Продолжить работу с интернет - магазином:
+        //    - В прошлом домашнем задании вы реализовали корзину на базе массивов.Какими объектами можно заменить их элементы ?
+        //    - Реализуйте такие объекты.
+        //    - Перенести функционал подсчета корзины на объектно - ориентированную базу.
+        function goods(name, price, description, photo) {
+            const product = {
+                'Name': name,
+                'Price': price,
+                'Description': description,
+                'Photo': photo
+            }
+            return product;
+        }
+
+        let basket = [];
+
+        function addBasket(purchase){
+            basket.push(purchase);
+        }
+
+        function basketPrice(a){
+            console.log(a.length)
+            let total = 0;
+            for (let i = 0; i < a.length; i++) {
+                total += a[i].Price;
+            }
+            return total;
+        }
+
+    </script>
+</body>
+</html>

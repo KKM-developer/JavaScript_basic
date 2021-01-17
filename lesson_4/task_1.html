@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Написать функцию, преобразующую число в объект.Передавая на вход число от 0 до 999, надо 
+        // получить на выходе объект, в котором в соответствующих свойствах описаны единицы, 
+        // десятки и сотни.Например, для числа 245 надо получить следующий объект: { ‘единицы’: 5, ‘десятки’: 4, ‘сотни’: 2 }.
+        // Если число превышает 999, необходимо выдать соответствующее сообщение с помощью console.log и вернуть пустой объект.
+        function convert(number) {
+            number = String(number);         
+            if (number.length <= 3) {
+                const convNumb = {
+                    'единицы': number[2],
+                    'десятки': number[1],
+                    'сотни': number[0]
+                }
+                return convNumb;  
+            }else {
+                const convNumb = {}
+                return console.log('Число больше 4 символов'), convNumb;
+            }
+
+        }
+    </script>
+</body>
+</html>
